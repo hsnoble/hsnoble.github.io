@@ -227,7 +227,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/Travel_Banner_mini.jpg');
+  background-image: url('../img/TO.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -246,8 +246,13 @@ header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 22px;
+  background-color: rgba(130, 128, 122, 0.75);
   line-height: 22px;
   margin-bottom: 25px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -255,7 +260,13 @@ header .intro-text .intro-heading {
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  margin-top: -25px;
+  background-color: rgba(130, 128, 122, 0.75);
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 15px;
+
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -281,7 +292,7 @@ header .intro-text .intro-heading {
 /*ABOUT SECTION*/
 #about
 {
-  background-image: url('../img/CAL.jpg');
+  background-image: url('../img/woods.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
