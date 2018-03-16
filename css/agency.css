@@ -106,9 +106,9 @@ fieldset[disabled] .btn-primary.active {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 3px;
-  font-size: 18px;
-  padding: 20px 40px;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  padding: 0.75em 0.75em;
 }
 .btn-xl:hover,
 .btn-xl:focus,
@@ -241,32 +241,23 @@ header {
 header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
+  margin-top: -2em;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-size: 22px;
-  background-color: rgba(130, 128, 122, 0.75);
-  line-height: 22px;
-  margin-bottom: 25px;
-  margin-left: 2.2em;
-  margin-right: 2.2em;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  font-size: 2em;
+  line-height: 2em;
+  margin-bottom: 1em;
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 30px;
-  margin-top: -25px;
-  background-color: rgba(130, 128, 122, 0.75);
-  margin-left: 1.1em;
-  margin-right: 1.1em;
-  padding-bottom: 15px;
-
+  font-size: 2em;
+  line-height: 2em;
 }
 @media (min-width: 768px) {
   header .intro-text {
