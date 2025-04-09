@@ -81,8 +81,14 @@
 	<!-- About Section -->
 <section id="Scavenger-Hunt">
 	<div class="container">
-		<div id="qr-reader" style="width:500px"></div>
-		<div id="qr-reader-results"></div>
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div id="qr-reader" style="width:100%; min-width: 250px;"></div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div id="qr-reader-results"></div>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -109,7 +115,7 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 	<script>
-		var resultContainer = document.getElementById('qr-reader-results');
+var resultContainer = document.getElementById('qr-reader-results');
 var lastResult, countResults = 0;
 
 function onScanSuccess(decodedText, decodedResult) {
