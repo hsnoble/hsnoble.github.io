@@ -86,6 +86,7 @@
 				<div id="qr-reader" style="width:100%; min-width: 250px;"></div>
 			</div>
 			<div class="col-12 col-md-6">
+				<h2>Results</h2>
 				<div id="qr-reader-results"></div>
 			</div>
 		</div>
@@ -124,6 +125,7 @@ function onScanSuccess(decodedText, decodedResult) {
         lastResult = decodedText;
         // Handle on success condition with the decoded message.
         console.log(`Scan result ${decodedText}`, decodedResult);
+	resultContainer.innerHTML = `${decodedText}`;
     }
 }
 
