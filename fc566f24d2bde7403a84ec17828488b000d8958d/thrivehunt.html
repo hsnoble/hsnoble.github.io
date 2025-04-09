@@ -29,6 +29,7 @@
 
 	<!--Web page icon shown on tab-->
 	<link rel="shortcut icon" href="SN_Icon.ico" type="image/x-icon">
+	<script src="https://unpkg.com/html5-qrcode"></script>
 	
 </head>
 
@@ -52,13 +53,10 @@
                         <a href="#page-top"></a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="./index.html">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#Scavenger-Hunt">Scavenger Hunt</a>
                     </li>
                 </ul>
             </div>
@@ -81,29 +79,12 @@
     </header>
 	
 	<!-- About Section -->
-    <section id="about">
-        <div class="container" >
-            <div class="row" style="background-color: rgba(130, 128, 122, 0.65); padding-bottom: 3em;" >
-                <div class="col-lg-12 text-center">
-                    <h1 class="section-heading">About Me</h1>
-					<br/>
-                </div>
-				<img src="img/team/hsn_qc.jpg" class="img-responsive img-rounded center-block" alt="Stephen Noble"> <br/>
-                <h3 class="text-center">Stephen Noble</h3>
-				
-				<p class="text-center" style="margin-left: 5em; margin-right: 5em;">
-				Third-year Software Development student at Seneca College with interest in web and software development. 
-				Seeking a CO-OP Position that will apply to my field of study. </p>
-				
-				<p class="text-center" style="margin-left: 5em; margin-right: 5em;">
-				Ready to face challenges and try new things. 
-				Ready to work with others for the benefit of any organization.</p>
-				
-				<br><br>
-				<a href="https://drive.google.com/file/d/1nB4ueIdS-24Sydc_0fHCTHvUaGNnN1MT/view?usp=sharing" target="_blank" class="btn btn-xl"><i class="fab fa-google-drive fa-2x" style="margin-right: 15px; "></i>View my Resume</a>
-            </div>
-        </div>
-    </section>
+<section id="Scavenger-Hunt">
+	<div class="container">
+		<div id="qr-reader" style="width:500px"></div>
+		<div id="qr-reader-results"></div>
+	</div>
+</section>
 
 	<!--Copyright -->
     <script src="js/copyright.js"></script>
@@ -127,7 +108,23 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+	<script>
+		var resultContainer = document.getElementById('qr-reader-results');
+var lastResult, countResults = 0;
 
+function onScanSuccess(decodedText, decodedResult) {
+    if (decodedText !== lastResult) {
+        ++countResults;
+        lastResult = decodedText;
+        // Handle on success condition with the decoded message.
+        console.log(`Scan result ${decodedText}`, decodedResult);
+    }
+}
+
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+	</script>
 </body>
 
 </html>
