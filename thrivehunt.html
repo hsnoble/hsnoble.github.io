@@ -60,11 +60,6 @@
 
     <!-- Header -->
     <header>
-	    <div class="container">
-	    	<div class="alert alert-danger my-3" role="alert">
-		  <p>This application is being tested....</p>
-		</div>
-	    </div>
     </header>
 	
 	<!-- About Section -->
@@ -83,9 +78,9 @@
                             <div class="card-marker-content text-center"><span>T</span><span class="year">2025</span></div>
                         </div>
                         <div class="card-content py-3 px-4 bg-light-subtle">
-                            <h3 class="card-heading">Pie Victim</h3>
-                            <h4 class="card-subheading">Pick a Retreat Participant to Pie!</h4>
-                            <p class="card-description mt-4">This is only a test.</p>
+                            <h3 id="play-card-heading" class="card-heading">Pie Victim</h3>
+                            <h4 id="play-card-subheading" class="card-subheading">Pick a Retreat Participant to Pie!</h4>
+                            <p id="play-card-desc" class="card-description mt-4">This is only a test.</p>
                             <div class="card-description" id="qr-reader-results"></div>
                         </div>
                         <div class="card-marker content-bottom">
@@ -123,20 +118,33 @@
     <!-- <script src="js/agency.min.js"></script> -->
 	<script>
         var resultContainer = document.getElementById('qr-reader-results');
+        var cardHeading = document.getElementById('play-card-heading'), cardSubheading = document.getElementById('play-card-subheading'), cardDesc = document.getElementById('play-card-desc');
         var lastResult, countResults = 0;
 
         function onScanSuccess(decodedText, decodedResult) {
+            var contentObj;
             if (decodedText !== lastResult) {
                 ++countResults;
                 lastResult = decodedText;
                 // Handle on success condition with the decoded message.
                 console.log(`Scan result ${decodedText}`, decodedResult);
-            resultContainer.innerHTML = `${decodedText}`;
+                resultContainer.innerHTML = `${decodedText}`;
+
+                try{
+                    contentObj = JSON.parse(decodedResult.decodedText);
+                }catch(e){
+                    console.log("QR Code does not contain any relevant content.\n" + e.message);
+                }
+
+                if(contentObj){
+                    cardHeading.innerHTML = contentObj.title;
+                    cardSubheading.innerHTML = contentObj.subtitle;
+                    cardDesc.innerHTML = contentObj.description;
+                }
             }
         }
 
-        var html5QrcodeScanner = new Html5QrcodeScanner(
-            "qr-reader", { fps: 10, qrbox: 225 });
+        var html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", { fps: 12, qrbox: 225, disableFlip: true });
         html5QrcodeScanner.render(onScanSuccess);
 	</script>
     <style>
