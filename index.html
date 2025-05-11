@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -9,56 +8,35 @@
     <meta name="description" content="Personal Portfolio">
     <meta name="author" content="Stephen Noble">
 
-    <title>Stephen Noble | Portfolio</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Fonts and special icons -->
-	<link href="vendor/font-awesome/css/fontawesome-all.css" rel="stylesheet">
-	
-	<!--FROM GOOGLE Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Bahiana|Baloo|Righteous|Share+Tech+Mono" rel="stylesheet">
-	
-	<!--Uses non min version of agency.css -->
-	<link href="css/agency.css" rel="stylesheet">
+    <title>Stephen Noble | Project Sandbox</title>
 
 	<!--Web page icon shown on tab-->
-	<link rel="shortcut icon" href="SN_Icon.ico" type="image/x-icon">
-	
+	<link rel="shortcut icon" href="./SN_Icon.ico" type="image/x-icon">
+	<script src="https://unpkg.com/html5-qrcode"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" rel="stylesheet">
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src=".js/md5.min.js"></script>
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Stephen Noble</a>
-            </div>
-
+            <a class="navbar-brand page-scroll" href="#page-top">Stephen Noble</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1">
+                <span class="navbar-toggler-icon"></i>
+            </button>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
                     </li>
-					<li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./SecureQRScanner.html">Secure QR Code</a>
                     </li>
                 </ul>
             </div>
@@ -66,168 +44,19 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container" >
-            <div class="intro-text" >
-				<div style="background-color: rgba(130, 128, 122, 0.75); padding-top: 2em; padding-bottom: 2em;">
-					<div class="intro-lead-in">Welcome To My Creative Space!</div>
-					<div class="intro-heading">It's Nice To See You!</div>
-					<a href="#about" class="page-scroll btn btn-xl">Show Me More</a>
-				</div>
-            </div>
-        </div>
-    </header>
-	
-	<!-- About Section -->
-    <section id="about">
-        <div class="container" >
-            <div class="row" style="background-color: rgba(130, 128, 122, 0.65); padding-bottom: 3em;" >
-                <div class="col-lg-12 text-center">
-                    <h1 class="section-heading">About Me</h1>
-					<br/>
-                </div>
-				<img src="img/team/hsn_qc.jpg" class="img-responsive img-rounded center-block" alt="Stephen Noble"> <br/>
-                <h3 class="text-center">Stephen Noble</h3>
-				
-				<p class="text-center" style="margin-left: 5em; margin-right: 5em;">
-				Third-year Software Development student at Seneca College with interest in web and software development. 
-				Seeking a CO-OP Position that will apply to my field of study. </p>
-				
-				<p class="text-center" style="margin-left: 5em; margin-right: 5em;">
-				Ready to face challenges and try new things. 
-				Ready to work with others for the benefit of any organization.</p>
-				
-				<br><br>
-				<a href="https://drive.google.com/file/d/1nB4ueIdS-24Sydc_0fHCTHvUaGNnN1MT/view?usp=sharing" target="_blank" class="btn btn-xl"><i class="fab fa-google-drive fa-2x" style="margin-right: 15px; "></i>View my Resume</a>
-            			<a href="./thrivehunt.html" target="_blank" class="btn btn-xl"><i class="fab fa-google-drive fa-2x" style="margin-right: 15px; "></i>Scavenger Hunt</a>
-	    </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
+    <section class="py-3 py-md-0 bg-light text-dark" id="index-hero">
         <div class="container">
-			<!-- Portfolio header -->
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Finished and ongoing projects</h3>
+            <div class="text-center p-3 mx-auto d-flex flex-column align-items-center justify-content-center">
+                <div class="title-container">
+                    <h1>Project Sandbox</h1>
+                    <h2>Select a Project</h2>
                 </div>
-            </div>
-			
-            <div class="row">
-				<!-- ARAIG SQUARE -->
-                <div class="col-md-6 col-sm-2 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/plane.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>As Real As It Gets (ARAIG)</h4>
-                        <p class="text-muted">Final Project for the C++ Course</p>
-						<p class="text-muted">2016</p>
-                    </div>
-                </div>
-				<!-- Decepticon SQUARE -->
-				<div class="col-md-6 col-sm-2 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/vex.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Decepticon Communication Software</h4>
-                        <p class="text-muted">Final Project for the Data Communications Course</p>
-						<p class="text-muted">2017</p>
-                    </div>
-                </div>
-				<!-- CAPSTONE SQUARE -->
-                <div class="col-md-6 col-sm-2 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/att.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Student Management System</h4>
-                        <p class="text-muted">Seneca College Capstone Project <br/>(Ongoing)</p>
-						<p class="text-muted">2017</p>
-                    </div>
+                <div class="mt-4 button-container">
+                    <a class="btn btn-primary btn-lg" href="./SecureQRScanner.html">Secure QR Scanner</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-			<!-- Header -->
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Get to Know Me Better</h2>
-					<h3 class="section-subheading text-muted" style="color: #b3b3b3;">See my GitHub and LinkedIn Pages or send me an E-Mail</h3>
-                </div>
-            </div>
-			<!-- Links -->
-            <div class="text-center">
-                <div class="col-lg-12">
-                    <ul class="list-inline social-buttons center-block">
-							<li><a href="https://github.com/hsnoble"><i class="fab fa-github fa-2x" style="margin-top: 10px;"></i></a>
-							</li>
-							<li><a href="https://www.linkedin.com/in/hsnoble/"><i class="fab fa-linkedin fa-2x" style="margin-top: 10px;  margin-left: 3px;"></i></a>
-							</li>
-							<li><a href="mailto:hsnoble@myseneca.ca"><i class="far fa-envelope fa-2x " style="margin-top: 9px;"></i></a>
-							</li>
-					</ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-	<!--Copyright -->
-    <script src="js/copyright.js"></script>
-
-    <!-- Portfolio Descriptions -->
-    <!-- Modulated in javascript-->
-
-    <!-- ARAIG SECTION -->
-    <script src="js/araig.js"></script>
-
-    <!-- DECEPTICON SECTION-->
-	<script src="js/btn.js"></script>
-
-    <!-- CAPSTONE SECTION -->
-	<script src="js/capstone.js"></script>
-	
-	<!-- write to javascript-->
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
-
 </html>
