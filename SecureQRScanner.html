@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Portfolio">
+    <meta name="author" content="Stephen Noble">
+
+    <title>Thrive Scavenger Hunt 2025</title>
+
+	<!--Web page icon shown on tab-->
+	<link rel="shortcut icon" href="./SN_Icon.ico" type="image/x-icon">
+	<script src="https://unpkg.com/html5-qrcode"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" rel="stylesheet">
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./SimpleCrypto.min.js"></script>
+    
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand page-scroll" href="#page-top">Thrive Retreat Hunt</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1">
+                <span class="navbar-toggler-icon"></i>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Scavenger-Hunt">Scavenger Hunt</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+	<!-- About Section -->
+    <section class="mt-4 py-3 py-md-0" id="Scavenger-Hunt">
+        <div class="container">
+            <!-- <h2>Scanner</h2> -->
+            <div class="row gy-3 gy-md-0">
+                <div class="col-12 col-md-5 d-flex flex-column">
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultWindow">Reveal</button> -->
+                     <h1>Thrive Scavenger Hunt 2025</h1>
+                     <p>Scan a Game Card to claim your prize</p>
+                     <div class="form-check form-switch" switch>
+                        <input class="form-check-input" type="checkbox" role="switch" id="delay-switch" checked>
+                        <label class="form-check-label" for="delay-switch">3-Second Delay</label>
+                    </div>
+                    <button type="button" class="mt-3 w-100 btn btn-dark" id="last-result">Previous Result</button>
+                </div>
+                <div class="col-12 col-md-7 d-flex flex-column">
+                    <div id="qr-reader" style="width:100%; min-width: 250px;"></div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="resultWindow" tabindex="-1" data-bs-backdrop="static" aria-labelledby="resultWindowLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down">
+                    <div class="modal-content bg-dark-subtle">
+                        <!-- <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="resultWindowLabel">Scan Result</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> -->
+                        <div class="modal-body ">
+                        <div class="card-content-container d-flex align-items-center justify-content-center">
+                                <div class="result-card p-3 bg-secondary-subtle border border-2">
+                                    <div class="card-marker content-top">
+                                        <div class="card-marker-content text-center"><span>T</span><span class="year">2025</span></div>
+                                    </div>
+                                    <div class="card-content py-3 px-4 bg-light-subtle">
+                                        <div class="output-delay-container">
+                                            <h1 id="countdown-delay"></h1>
+                                        </div>
+                                        <div class="card-content-text-container">
+                                            <h3 id="play-card-heading" class="card-heading">No Scanned Card Found</h3>
+                                            <h4 id="play-card-subheading" class="card-subheading">Please Scan a Game Card</h4>
+                                            <p id="play-card-desc" class="card-description mt-4"></p>
+                                        </div>
+                                        <p id="play-card-id"></p>
+                                    </div>
+                                    <div class="card-marker content-bottom">
+                                        <div class="card-marker-content text-center"><span>T</span><span class="year">2025</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-light">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button type="button" class="w-100 btn btn-danger" id="scan-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="./encryption.js"></script>
+    <script src="./codeReader.js"></script>
+</body>
+</html>

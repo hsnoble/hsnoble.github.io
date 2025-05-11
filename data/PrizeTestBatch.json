@@ -1,0 +1,9 @@
+{
+    "prizeSet":[
+        {"prize": {"id": "THRR250001", "type": "major-prize"}},
+        {"prize": {"id": "THRR250002", "type": "gift-card"}},
+        {"prize": {"id": "THRR250003", "type": "prize-box"}},
+        {"prize": {"id": "THRR250004", "type": "pie-nominee"}},
+        {"prize": {"id": "THRR250005", "type": "pie"}}
+    ]
+}

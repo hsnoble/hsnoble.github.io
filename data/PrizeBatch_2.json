@@ -1,0 +1,22 @@
+{
+    "prizeSet":[
+        {"prize": {"id": "THRR250101", "type": "prize-box"}},
+        {"prize": {"id": "THRR250102", "type": "pie"}},
+        {"prize": {"id": "THRR250103", "type": "pie-nominee"}},
+        {"prize": {"id": "THRR250104", "type": "pie"}},
+        {"prize": {"id": "THRR250105", "type": "pie"}},
+        {"prize": {"id": "THRR250106", "type": "minor-prize"}},
+        {"prize": {"id": "THRR250201", "type": "pie-nominee"}},
+        {"prize": {"id": "THRR250202", "type": "major-prize"}},
+        {"prize": {"id": "THRR250203", "type": "pie"}},
+        {"prize": {"id": "THRR250204", "type": "prize-box"}},
+        {"prize": {"id": "THRR250205", "type": "minor-prize"}},
+        {"prize": {"id": "THRR250206", "type": "major-prize"}},
+        {"prize": {"id": "THRR250301", "type": "pie"}},
+        {"prize": {"id": "THRR250302", "type": "major-prize"}},
+        {"prize": {"id": "THRR250303", "type": "pie-nominee"}},
+        {"prize": {"id": "THRR250304", "type": "pie"}},
+        {"prize": {"id": "THRR250305", "type": "prize-box"}},
+        {"prize": {"id": "THRR250306", "type": "minor-prize"}}
+    ]
+}

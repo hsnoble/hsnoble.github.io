@@ -1,0 +1,39 @@
+{
+    "prizeInfo": [
+        {
+            "type": "major-prize",
+            "title": "Blue Jays Tickets for 2",
+            "subtitle": "Sponsored by Attrell Toyota and Attrell Hyundai",
+            "description": "Follow instructions from THRIVE about how to redeem your tickets.",
+            "imageFile": ""
+        },
+        {
+            "type": "gift-card",
+            "title": "$10 Gift Card",
+            "subtitle": "You won a $10 Gift Card of your choice!",
+            "description": "",
+            "imageFile": ""
+        },
+        {
+            "type": "prize-box",
+            "title": "Prize Box!",
+            "subtitle": "Get an item from the Prize Box!",
+            "description": "",
+            "imageFile": ""
+        },
+        {
+            "type": "pie",
+            "title": "It's a PIE!",
+            "subtitle": "Sorry...",
+            "description": "ALTERNATIVE: You can choose to dive into the lake.",
+            "imageFile": ""
+        },
+        {
+            "type": "pie-nominee",
+            "title": "PIE Somebody Else!",
+            "subtitle": "Nominate Someone to Pie!",
+            "description": "Exceptions Apply",
+            "imageFile": ""
+        }
+    ]
+}
