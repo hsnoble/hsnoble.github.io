@@ -1,0 +1,115 @@
+.card-content #play-card-heading, .card-content #play-card-subheading, .card-content #play-card-desc{
+    word-break: break-word;
+}
+/* QR Tester */
+.result-card{
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+span.year{
+    font-size: 16px;
+}
+.modal{
+    --bs-modal-margin : 0.75rem;
+    --bs-modal-padding: 0.75rem;
+}
+.card-content-container{
+    aspect-ratio: 5/7;
+}
+.card-content{
+    position: relative;
+    /* height: 400px; */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    justify-content: space-between;
+
+    flex: 1 0 auto;
+}
+.card-content-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+#play-card-id{
+    margin: 0;
+    font-size: 10px;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+.card-marker{
+    /* position: absolute; */
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+}
+.card-marker-content{
+    font-weight: 500;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+}
+.card-marker.content-bottom{
+    right: 10px;
+    bottom: 10px;
+    transform: rotate(180deg);
+    margin-top: 15px;
+}
+.card-marker.content-top{
+    left: 10px;
+    top: 10px;
+    margin-bottom: 15px;
+}
+#qr-reader, .card-content-container{
+    flex: 1 1 auto;
+}
+
+#qr-reader video{
+    width: 100% !important;
+}
+/* #qr-reader #qr-shaded-region{
+    aspect-ratio: 1 / 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+.form-check.form-switch{
+    font-size: 20px;
+}
+.output-delay-container{
+    flex: 2 1 auto;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
+
+section#index-hero{
+    min-height: 500px;
+    padding: 10px 0;
+    height: calc(100vh - 57px);
+}
+section#index-hero .container, section#index-hero .container > div{
+    height: 100%;
+}
+@media (max-width: 991px){
+    #qr-shaded-region{
+        display: none;
+    }
+}
