@@ -19,6 +19,12 @@ function qrboxFunction(viewfinderWidth, viewfinderHeight) {
     let minEdgePercentage = 0.7; // 70%
     let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
     let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+
+    if(qrboxSize < 325){
+        qrboxSize = 325;
+    }
+
+    console.log(qrboxSize);
     return {
         width: qrboxSize,
         height: qrboxSize

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="pinProtected" content="true">
+    <title>Secure QR Scan - JSON Encryptor</title>
+    <script src="./SimpleCrypto.min.js"></script>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <link href="./bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="./main.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="mainNav" class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand page-scroll" href="./index.html">Stephen Noble</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1">
+                <span class="navbar-toggler-icon"></i>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./SecureQRScanner.html">Secure QR Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Code Encyptor</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <div class="logout-container">
+                <button type="button" class="w-100 btn btn-primary" id="logout">Logout</button>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section class="mt-4 py-3 py-md-0 encryptor">
+        <div class="container">
+            <h1>Secure QR Scan - JSON Encryptor</h1>
+            <div id="encryptionResult"></div>
+        </div>
+    </section>
+    <script src="./encryption.js"></script>
+    <script src="./md5.min.js"></script>
+    <script src="./cookie.js"></script>
+    <script src="./redirect.js"></script>
+    <script src="./bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        encryptInit(true);
+        /*
+        const pageLock = new Secret();
+
+        if(pageLock.isVerified('9050'))
+            document.cookie = "pageLockActive=false";*/
+    </script>
+</body>
+</html>
