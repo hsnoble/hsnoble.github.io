@@ -108,6 +108,9 @@ section#index-hero{
 section#index-hero .container, section#index-hero .container > div{
     height: 100%;
 }
+section.encryptor #encryptionResult p{
+    word-break: break-all;
+}
 @media (max-width: 991px){
     #qr-shaded-region{
         display: none;
