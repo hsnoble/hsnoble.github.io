@@ -5,14 +5,14 @@
             "title": "Blue Jays Tickets for 2",
             "subtitle": "Sponsored by Attrell Toyota and Attrell Hyundai",
             "description": "Follow instructions from THRIVE about how to redeem your tickets.",
-            "imageFile": ""
+            "imageFile": "./img/SummitHunt/Baseball.png"
         },
         {
             "type": "gift-card",
             "title": "$10 Gift Card",
-            "subtitle": "You won a $10 Gift Card of your choice!",
+            "subtitle": "You won a $25 Gift Card of your choice!",
             "description": "",
-            "imageFile": ""
+            "imageFile": "./img/SummitHunt/GiftCard.png"
         },
         {
             "type": "prize-box",
@@ -25,15 +25,15 @@
             "type": "pie",
             "title": "It's a PIE!",
             "subtitle": "Sorry...",
-            "description": "ALTERNATIVE: You can choose to dive into the lake.",
-            "imageFile": ""
+            "description": "ALTERNATIVE: Pick a consequence from the 'Consequence Bowl'",
+            "imageFile": "./img/SummitHunt/PlayIcons-Pie.png"
         },
         {
             "type": "pie-nominee",
             "title": "PIE Somebody Else!",
             "subtitle": "Nominate Someone to Pie!",
             "description": "Exceptions Apply",
-            "imageFile": ""
+            "imageFile": "./img/SummitHunt/PlayIcons-Pick.png"
         }
     ]
 }

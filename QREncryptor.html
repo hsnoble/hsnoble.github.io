@@ -6,8 +6,10 @@
     <meta name="pinProtected" content="true">
     <title>Secure QR Scan - JSON Encryptor</title>
     <script src="./js/SimpleCrypto.min.js"></script>
+    <script src="./js/qrcode.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
     <link href="./css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -51,12 +53,14 @@
     <script src="./js/cookie.js"></script>
     <script src="./js/redirect.js"></script>
     <script>
-        encryptInit(true);
+        encryptInit(false);
         /*
         const pageLock = new Secret();
 
         if(pageLock.isVerified('9050'))
             document.cookie = "pageLockActive=false";*/
+
+        //new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
     </script>
 </body>
 </html>

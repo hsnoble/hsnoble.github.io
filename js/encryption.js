@@ -30,14 +30,19 @@ function encryptData(data){
         var simpleCrypto = new SimpleCrypto(prizeID);
         const cipherText = simpleCrypto.encrypt(prizeObj);
         var prizePair = {id: prizeID, content: cipherText};
-
+        //var scanCode;
         if(result){
             result.innerHTML += "<h2>Item #" +  (x+1) + "</h2>";
-            result.innerHTML += "<h3>Plain Text</h3><p>" +  JSON.stringify(prizeObj);   + "</p>";
+            result.innerHTML += "<div class='col-12 col-md-6'><h3>Plain Text</h3><p>" +  JSON.stringify(prizeObj);   + "</p>";
             //result.innerHTML += "<h3>Cipher</h3><p>" +  cipherText + "</p>";
-            result.innerHTML += "<h3>QR Code Data</h3><p class='p-3 bg-secondary-subtle'>" + JSON.stringify(prizePair) + "</p><br/><hr/>";
-
+            result.innerHTML += "<h3>QR Code Data</h3><p class='p-3 bg-secondary-subtle'>" + JSON.stringify(prizePair) + "</p></div>";
+            //result.innerHTML += "<h3>QR Code Image</h3><div id='qrcode-" + (x+1) + "'></div>";
+            result.innerHTML += "<br/><hr/>";
+            
             //decryptionTesting(prizePair);
+            var findID = "qrcode-" + (x+1);
+            //scanCode = createQR(findID);
+            //scanCode.makeCode(prizeID);
         }
     }
     console.log("Encryption Complete");
@@ -74,4 +79,16 @@ function decodePrize(id, content, prizeDB = prizeInfo){
         prize = prizeInfo.find( ({ type }) => type === prizeData.type);
     }
     return prize;
+}
+
+function createQR(containerID){
+    var qrData = new QRCode(document.getElementById(containerID), {
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.Q
+    });
+
+    return qrData;
 }
