@@ -10,6 +10,7 @@
 var resultContainer = document.getElementById('qr-reader-results');
 const myModal = new bootstrap.Modal(document.getElementById('resultWindow'));
 var cardHeading = document.getElementById('play-card-heading'), cardSubheading = document.getElementById('play-card-subheading'), cardDesc = document.getElementById('play-card-desc');
+var cardIcon = document.getElementById('card-icon')
 var lastResult, countResults = 0;
 var cardID = document.getElementById('play-card-id');
 
@@ -55,7 +56,7 @@ function onScanSuccess(decodedText, decodedResult) {
             if($('.form-check #delay-switch').prop('checked')){
                 countdownDelay();
             }
-            sendToModal(cardResult.title, cardResult.subtitle, cardResult.description, contentObj.id);
+            sendToModal(cardResult.title, cardResult.subtitle, cardResult.imageFile ,cardResult.description, contentObj.id);
             // If Scanner is Not paused
             if(html5QrcodeScanner.getState() != 3){
                 html5QrcodeScanner.pause();
@@ -69,7 +70,7 @@ function getLastResult(lastResult){
     if(contentObj){
         const cardResult = decodePrize(contentObj.id, contentObj.content);
         //console.log(cardResult);
-        sendToModal(cardResult.title, cardResult.subtitle, cardResult.description, contentObj.id);
+        sendToModal(cardResult.title, cardResult.subtitle, cardResult.imageFile ,cardResult.description, contentObj.id);
         myModal.show();
         // If Scanner is Not paused
         if(html5QrcodeScanner.getState() != 3){
@@ -87,11 +88,16 @@ function togglePreviousScanBtn(){
     }
 }
 
-function sendToModal(title, subtitle, desc, cardNum){
+function sendToModal(title, subtitle, imgIcon, desc, cardNum){
     cardHeading.innerHTML = title;
     cardSubheading.innerHTML = subtitle;
     cardDesc.innerHTML = desc;
     cardID.innerHTML = cardNum;
+
+    if(imgIcon != '')
+        cardIcon.src = imgIcon;
+    else
+        $('#card-icon').hide();
 }
 
 function countdownDelay() {
@@ -125,7 +131,7 @@ togglePreviousScanBtn();
 
 $('button#scan-reset').on('click', function(e){
     myModal.hide();
-    sendToModal("Please Scan a Game Card", "", "", "");
+    sendToModal("Please Scan a Game Card", "", "./img/SummitHunt/scan.png" , "", "");
     // If Scannner is not scanning
     if(html5QrcodeScanner.getState() != 2){
         html5QrcodeScanner.resume()

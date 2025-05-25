@@ -9,7 +9,7 @@
         },
         {
             "type": "gift-card",
-            "title": "$10 Gift Card",
+            "title": "$25 Gift Card",
             "subtitle": "You won a $25 Gift Card of your choice!",
             "description": "",
             "imageFile": "./img/SummitHunt/GiftCard.png"
@@ -19,7 +19,7 @@
             "title": "Prize Box!",
             "subtitle": "Get an item from the Prize Box!",
             "description": "",
-            "imageFile": ""
+            "imageFile": "./img/SummitHunt/GiftBox.png"
         },
         {
             "type": "pie",
@@ -31,7 +31,7 @@
         {
             "type": "pie-nominee",
             "title": "PIE Somebody Else!",
-            "subtitle": "Nominate Someone to Pie!",
+            "subtitle": "Pick Someone to Pie!",
             "description": "Exceptions Apply",
             "imageFile": "./img/SummitHunt/PlayIcons-Pick.png"
         }
