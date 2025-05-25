@@ -28,6 +28,7 @@ span.year{
     aspect-ratio: 5/7;
 }
 .card-content{
+    color: white;
     position: relative;
     /* height: 400px; */
     width: 100%;
@@ -38,6 +39,13 @@ span.year{
     justify-content: space-between;
     border-radius: 5px;
     flex: 1 0 auto;
+
+    /* Glassmorphism - Glass Effect */
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
 }
 .card-content-text-container{
     display: flex;
