@@ -50,7 +50,7 @@ function onScanSuccess(decodedText, decodedResult) {
         if(contentObj){
             const cardResult = decodePrize(contentObj.id, contentObj.content);
             //console.log(cardResult);
-            
+            alert(cardResult);
             myModal.show();
             // console.log()
             if($('.form-check #delay-switch').prop('checked')){
