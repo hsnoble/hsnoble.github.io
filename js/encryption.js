@@ -72,7 +72,7 @@ function decodePrize(id, content, prizeDB = prizeInfo){
     const prizeInfo = prizeDB.prizeInfo;
     let prize = [];
 
-    //console.log(prizeData.type);
+    alert(prizeData.type);
     //console.log(prizeInfo);
 
     if(prizeInfo){
